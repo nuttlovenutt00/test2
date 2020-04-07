@@ -22,7 +22,7 @@
 
 
    <script>
-    $( document ).ready(function() {
+    
        function aa(){
            liff.sendMessages([
               {
@@ -33,6 +33,6 @@
 
            liff.closeWindows()
        }
-    });
+   
   </script>
 </html>
