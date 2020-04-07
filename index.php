@@ -8,6 +8,7 @@
   <p id="scanCode"></p>
   <p>
     <button id="btnScanCode" onclick="scanCode();">Scan Code</button>
+    <button id="btnScanCode" onclick="send();">Send</button>
   </p>
   <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
   <script>
@@ -19,6 +20,20 @@
       });
     }
     liff.init({ liffId: "1654049732-NO7ZWReR" }, () => {}, err => console.error(err.code, error.message));
+    function send() {
+     liff.sendMessages([{
+            type: 'text',
+            text: "Send text message"
+        }, {
+            type: 'sticker',
+            packageId: '2',
+            stickerId: '144'
+        }]).then(function () {
+            window.alert("Sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+      }
   </script>
 </body>
 </html>
