@@ -19,9 +19,10 @@
         document.getElementById("scanCode").textContent = stringifiedResult;
       });
     }
-    liff.init({ liffId: "1654049732-NO7ZWReR" }, () => {}, err => console.error(err.code, error.message));
-    function send() {
-     liff.sendMessages([{
+
+    liff.init({ liffId: "1654049732-NO7ZWReR" }, () => {
+      function send() {
+      liff.sendMessages([{
             type: 'text',
             text: "Send text message"
         }, {
@@ -33,7 +34,12 @@
         }).catch(function (error) {
             window.alert("Error sending message: " + error);
         });
+
       }
+    }, err => console.error(err.code, error.message));
+   
+     
+      
   </script>
 </body>
 </html>
