@@ -20,18 +20,19 @@
       });
     }
 
+function send() {
     liff.init({ liffId: "1654049732-NO7ZWReR" }, () => {
-      function send() {
+      
       liff.sendMessages([{
             type: 'text',
             text: "Send text message"
         }
         ])
 
-      }
+      
     }, err => console.error(err.code, error.message));
-   
-     
+   alert("send");
+       }
       
   </script>
 </body>
