@@ -22,12 +22,14 @@
 
 
    <script>
-    
+    $( document ).ready(function() {
+       liff.init(function (data) {});
+    });
        function aa(){
            liff.sendMessages([
               {
               type: 'text',
-              text: 'From:'
+              text: 'From:' + profile.displayName
             }
             ]);
 
